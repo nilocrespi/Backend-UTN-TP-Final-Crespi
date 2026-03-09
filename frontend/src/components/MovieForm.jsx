@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const MovieForm = React.forwardRef(({ onSubmit, onCancel, editingMovie }, ref) => {
+const MovieForm = React.forwardRef(({ onSubmit, onCancel, editingMovie, resetKey }, ref) => {
   const [formData, setFormData] = useState({
     title: '',
     year: '',
@@ -27,7 +27,7 @@ const MovieForm = React.forwardRef(({ onSubmit, onCancel, editingMovie }, ref) =
         director: ''
       });
     }
-  }, [editingMovie]);
+  }, [editingMovie, resetKey]);
 
   const handleChange = (e) => {
     const { id, value } = e.target;

@@ -5,7 +5,7 @@ const About = () => {
         <div>
             <Header/>
             <div className="about-container">
-                <h2>Acerca de nosotros</h2>
+                <h2>About</h2>
                 <p>
                     Esta es una aplicación de gestión de películas desarrollada con React y Express.
                     Permite a los usuarios autenticados crear, actualizar, eliminar y filtrar películas.
@@ -15,7 +15,6 @@ const About = () => {
                     <li>Autenticación de usuarios (Login/Register)</li>
                     <li>CRUD completo de películas</li>
                     <li>Filtrado avanzado por título, género, año y rating</li>
-                    <li>Interfaz moderna y responsiva</li>
                 </ul>
                 <h3>Tecnologías utilizadas:</h3>
                 <ul>

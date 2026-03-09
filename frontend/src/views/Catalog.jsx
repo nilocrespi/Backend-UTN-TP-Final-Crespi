@@ -11,6 +11,7 @@ import Swal from "sweetalert2"
 const Catalog = () => {
   	const [movies, setMovies] = useState([]);
   	const [editingMovie, setEditingMovie] = useState(null);
+	const [resetFormKey, setResetFormKey] = useState(0);
 	const movieFormRef = useRef(null);
 
   	useEffect(() => {
@@ -31,6 +32,7 @@ const Catalog = () => {
 		const createdMovie = await movieService.addMovie(dataMovie);
 		Swal.fire("Éxito", `Película agregada correctamente (ID: ${createdMovie._id})`, "success");
 		loadMovies();
+		setResetFormKey(prev => prev + 1);
 		} catch (error) {
 		Swal.fire("Error", error.message || "Error al agregar película", "error");
 		}
@@ -95,27 +97,24 @@ const Catalog = () => {
 	};
 
   	return (
-		<div className="app-container">      
+		<>      
 			<Header/>
-		
-			<MovieForm 
-			ref={movieFormRef}
-			onSubmit={handleFormSubmit}
-			onCancel={handleCancelEdit}
-			editingMovie={editingMovie}
-		/>
+			<div className="app-container">
+				<MovieForm 
+				ref={movieFormRef}
+				onSubmit={handleFormSubmit}
+				onCancel={handleCancelEdit}
+				editingMovie={editingMovie}
+			resetKey={resetFormKey}
+				/>
 
-			<FilterMovies 
-				onFilter={loadMovies}
-				onClearFilter={() => loadMovies()}
-			/>
-
-			<MovieList 
-				movies={movies}
-				onEdit={handleEditingMovie}
-				onDelete={handleDeleteMovie}
-			/>
-		</div>
+				<MovieList 
+					movies={movies}
+					onEdit={handleEditingMovie}
+					onDelete={handleDeleteMovie}
+				/>
+			</div>
+		</>
   	);
 }
 
