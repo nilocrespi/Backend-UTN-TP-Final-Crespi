@@ -263,12 +263,3 @@ Authorization: Bearer <token>
 
 ---
 
-## 👨‍💻 Autor
-
-Desarrollado como Trabajo Final de Comisión 999198248 - UTN
-
----
-
-## 📄 Licencia
-
-Este proyecto es de uso educativo.

@@ -347,11 +347,3 @@ PORT=3001
 - No commite el archivo `.env` a git
 
 ---
-
-## 👨‍💻 Soporte
-
-Para problemas o preguntas, revisa:
-1. Los logs del servidor
-2. La consola del navegador (frontend)
-3. La base de datos MongoDB compass o mongosh
-

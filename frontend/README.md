@@ -433,23 +433,3 @@ npm run dev
 6. ✅ No hagas requests sin token
 
 ---
-
-## 🎯 Checklist de Desarrollo
-
-- [ ] Backend corriendo en puerto 5000
-- [ ] Variables de entorno (.env) configuradas
-- [ ] npm install completado
-- [ ] npm run dev funciona sin errores
-- [ ] Puedo hacer login/register
-- [ ] Las películas se cargan correctamente
-- [ ] Puedo crear, editar y eliminar películas
-
----
-
-## 👨‍💻 Soporte
-
-Para problemas:
-1. Revisa la consola del navegador (F12)
-2. Revisa los logs del servidor backend
-3. Verifica que todas las URLs sean correctas
-4. Asegúrate de tener conexión con el backend
