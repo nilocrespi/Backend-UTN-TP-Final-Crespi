@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken"
 import dotenv from "dotenv"
 import {Request, Response} from "express"
 import {IPayload} from "../interfaces/IPayload"
+import {registerValidate, loginValidate} from "../validators/authValidator"
 
 dotenv.config()
 
@@ -17,20 +18,13 @@ const register = async (req: Request, res: Response) => {
     try {
         const body = req.body
 
+        const validate = registerValidate.safeParse(body)
+
+        if (!validate.success) {
+            return res.status(400).json({success: false, error: validate.error.flatten().fieldErrors})
+        }
+
         const {email, password, username} = body
-
-        // implementar validaciones de imput con ZOD
-        if (!email || !password || !username) {
-            return res.status(400).json ({success: false, error: "data invalida, revisa los datos ingresados"})
-        }
-
-        if (!email.includes("@") || !email.endsWith(".com")) {
-            return res.status(400).json ({success: false, error: "correo electronico invalido"})
-        }
-
-        if (password.length < 4) {
-            return res.status(400).json ({success: false, error: "la contraseña debe contar al menos con 4 caracteres"})
-        }
 
         const foundUser = await User.findOne ({email})
 
@@ -59,18 +53,20 @@ const login = async (req: Request, res: Response) => {
     try {
         const body = req.body
 
-        const {email, password} = body
+        const validate = loginValidate.safeParse(body)
 
-        if (!email || !password) {
-            return res.status(400).json({success: false, error: "data invalida, ingrese los datos requeridos"})
+        if (!validate.success) {
+            return res.status(400).json({success: false, error: validate.error.flatten().fieldErrors})
         }
+
+        const {email, password} = body
 
         const foundUser = await User.findOne({email})
 
         if (!foundUser) {
             return res.status(401).json({success: false, error: "desautorizado"})
         }
-        
+
         const validatePassword = await bcryptjs.compare(password, foundUser.password)
 
         if (!validatePassword) {
