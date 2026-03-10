@@ -31,10 +31,10 @@ serverHttp.use((req, res) => {
 
 const PORT = process.env.PORT
 
-serverHttp.listen(PORT, () => {
+serverHttp.listen(PORT, async () => {
     try {
+        await connectDB()
         console.log(`✅ Servidor http en escucha en el puerto http://127.0.0.1:${PORT}`)
-        connectDB()
     } catch (error) {
         const err = error as Error
         console.log(err.message)
