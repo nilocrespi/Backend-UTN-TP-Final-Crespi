@@ -1,0 +1,24 @@
+meta {
+  name: Register User
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://backend-utn-tp-final-crespi.onrender.com/api/auth/register
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username" : "testUser",
+    "email" : "testUser@mail.com",
+    "password" : "testPwd"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

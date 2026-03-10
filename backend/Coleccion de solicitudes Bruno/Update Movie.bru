@@ -1,0 +1,26 @@
+meta {
+  name: Update Movie
+  type: http
+  seq: 5
+}
+
+patch {
+  url: https://backend-utn-tp-final-crespi.onrender.com/api/movies/69af414cb68767d1994b799c
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWFmNDExM2I2ODc2N2QxOTk0Yjc5OTgiLCJ1c2VybmFtZSI6InRlc3RVc2VyMiIsImVtYWlsIjoidGVzdFVzZXIyQG1haWwuY29tIiwiaWF0IjoxNzczMDkzMTUyLCJleHAiOjE3NzMwOTY3NTJ9.sYxiZJrSowrwCA1CAKW746tnB51IKcTxsn9HrVKcZWs
+}
+
+body:json {
+    {
+      "rating": 9
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

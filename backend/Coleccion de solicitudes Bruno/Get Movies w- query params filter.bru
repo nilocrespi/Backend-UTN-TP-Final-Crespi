@@ -1,0 +1,25 @@
+meta {
+  name: Get Movies w/ query params filter
+  type: http
+  seq: 7
+}
+
+get {
+  url: https://backend-utn-tp-final-crespi.onrender.com/api/movies?minYear=1942&maxYear=1942
+  body: none
+  auth: inherit
+}
+
+params:query {
+  minYear: 1942
+  maxYear: 1942
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWFmNDExM2I2ODc2N2QxOTk0Yjc5OTgiLCJ1c2VybmFtZSI6InRlc3RVc2VyMiIsImVtYWlsIjoidGVzdFVzZXIyQG1haWwuY29tIiwiaWF0IjoxNzczMDkzMTUyLCJleHAiOjE3NzMwOTY3NTJ9.sYxiZJrSowrwCA1CAKW746tnB51IKcTxsn9HrVKcZWs
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
