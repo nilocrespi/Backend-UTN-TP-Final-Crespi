@@ -6,6 +6,7 @@ Aplicación React moderna para gestionar películas con autenticación, búsqued
 
 ## 📋 Tabla de Contenidos
 
+- [Deployment en Vivo](#deployment-en-vivo)
 - [Instalación](#instalación)
 - [Scripts Disponibles](#scripts-disponibles)
 - [Estructura](#estructura)
@@ -14,6 +15,20 @@ Aplicación React moderna para gestionar películas con autenticación, búsqued
 - [Servicios](#servicios)
 - [Variables de Entorno](#variables-de-entorno)
 - [Solución de Problemas](#solución-de-problemas)
+
+---
+
+## 🚀 Deployment en Vivo
+
+**URL:** https://backend-utn-tp-final-crespi.vercel.app
+
+**Plataforma:** [Vercel](https://vercel.com)
+
+- ✅ Desplegado automáticamente desde GitHub
+- ✅ Servidor edge optimizado
+- ✅ Build automático on-push
+
+**Backend conectado a:** https://backend-utn-tp-final-crespi.onrender.com
 
 ---
 
@@ -423,13 +438,3 @@ npm run dev
 
 ---
 
-## 📝 Buenas Prácticas
-
-1. ✅ Siempre valida datos antes de enviar
-2. ✅ Guarda el token en localStorage
-3. ✅ Maneja errores de red gracefully
-4. ✅ Usa componentes reutilizables
-5. ✅ Mantén Context API limpio
-6. ✅ No hagas requests sin token
-
----

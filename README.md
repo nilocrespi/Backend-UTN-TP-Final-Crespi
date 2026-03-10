@@ -6,6 +6,7 @@ Aplicación full-stack para la gestión de películas con autenticación y anál
 
 ## 📋 Tabla de Contenidos
 
+- [Deployments en Vivo](#deployments-en-vivo)
 - [Características](#características)
 - [Tecnologías](#tecnologías)
 - [Pre-requisitos](#pre-requisitos)
@@ -14,6 +15,17 @@ Aplicación full-stack para la gestión de películas con autenticación y anál
 - [Uso](#uso)
 - [API](#api)
 - [Contribuciones](#contribuciones)
+
+---
+
+## 🚀 Deployments en Vivo
+
+| Servicio | URL | Plataforma |
+|----------|-----|-----------|
+| **Frontend** | https://backend-utn-tp-final-crespi.vercel.app | Vercel |
+| **Backend** | https://backend-utn-tp-final-crespi.onrender.com | Render |
+
+> ⚠️ **Nota**: El backend en Render usa el plan gratuito, puede tomar ~30 segundos en la primera solicitud si la instancia está dormida.
 
 ---
 

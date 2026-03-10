@@ -6,6 +6,7 @@ API REST para gestión de películas con autenticación JWT. Desarrollada con No
 
 ## 📋 Tabla de Contenidos
 
+- [Deployment en Vivo](#deployment-en-vivo)
 - [Instalación](#instalación)
 - [Configuración](#configuración)
 - [Scripts Disponibles](#scripts-disponibles)
@@ -14,6 +15,20 @@ API REST para gestión de películas con autenticación JWT. Desarrollada con No
 - [Autenticación](#autenticación)
 - [Validación](#validación)
 - [Solución de Problemas](#solución-de-problemas)
+
+---
+
+## 🚀 Deployment en Vivo
+
+**URL Base:** https://backend-utn-tp-final-crespi.onrender.com
+
+**Plataforma:** [Render](https://render.com)
+
+- ✅ Desplegado automáticamente desde GitHub
+- ✅ Base de datos MongoDB Atlas (cloud)
+- ⚠️ Plan gratuito: primera solicitud puede tomar ~30 segundos
+
+**Estado:** [Dashboard de Render](https://dashboard.render.com)
 
 ---
 
