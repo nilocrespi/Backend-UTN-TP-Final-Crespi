@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:50000/api";
+const BASE_URL = "https://backend-utn-tp-final-crespi.onrender.com/api";
 
 const authService = {
   async register(userData) {
